@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>  piedra, papel, tijeras</title>
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+
+
+<script>
+
+//piedra, papel, tijeras
+
+var eleccionusuario = prompt("juega contra el ordenador: escribe piedra, papel o tijeras");
+var eleccionordenador;
+
+//crear numero random(de 1 a 3)
+//var random= Math.round(Math.random()*4);
+
+var random= Math.round(Math.random()*2)+1;
+console.log(random);
+
+
+
+//asociar numero random a las 3 opciones piedra, tijeras, papel
+    if   ( random == 1) {eleccionordenador="piedra"}
+    else if ( random == 2) {eleccionordenador="tijeras"}
+    else if  ( random == 3) {eleccionordenador="papel"}
+
+
+
+//crear las diferentes hipotesis que pueden ocurrir
+
+if(eleccionusuario===eleccionordenador){
+    document.write( "tu y el ordenador habeis elegido la misma arma, intenta otra vez")}
+
+ if(eleccionusuario==="piedra" && eleccionordenador==="tijeras"){
+    document.write( "el ordenador ha elegido tijeras, has ganado!")}
+
+
+ if(eleccionusuario==="piedra" && eleccionordenador==="papel"){
+    document.write( "el ordenador ha elegido papel y te ha ganado!")}
+
+if(eleccionusuario==="papel" && eleccionordenador==="tijeras"){
+    document.write( "el ordenador ha elegido tijeras y te ha ganado!")}
+
+
+if(eleccionusuario==="papel" && eleccionordenador==="piedra"){
+    document.write( "el ordenador ha elegido piedra! Has ganado tu!")}
+
+if(eleccionusuario==="tijeras" && eleccionordenador==="papel"){
+    document.write( "el ordenador ha elegido papel, has ganado!")}
+
+
+if(eleccionusuario==="tijeras" && eleccionordenador==="piedra"){
+    document.write( "el ordenador ha elegido piedra y te ha ganado!")}
+
+if(eleccionusuario!=="papel" && eleccionusuario!=="tijeras" && eleccionusuario!=="piedra"){
+    document.write("no has elegido ninguna de las tres opciones valida. Intentalo otra vez!")
+}
+
+
+
+
+//juego simple//
+//if (eleccionusuario == piedra) {
+//document.write("lo sentimos, el ordenador ha elegido papel y te ha ganado! Intenta otra vez")}
+//if (eleccionusuario == "papel") {
+//document.write("lo sentimos, el ordenador ha elegido tijeras y te ha ganado! Intenta otra vez")}
+//if (eleccionusuario == "tijeras") {
+//document.write("lo sentimos, el ordenador ha elegido piedra y te ha ganado! Intenta otra vez")}
+
+
+
+
+</script>
+
+</body>
+</html>
